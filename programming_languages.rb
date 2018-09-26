@@ -2,6 +2,7 @@ require "pry"
 
 def reformat_languages(languages)
   new_hash = {}
+<<<<<<< HEAD
   current_style = []
   languages.each do |style, language|
     current_style << style
@@ -20,4 +21,11 @@ def reformat_languages(languages)
     current_style = []
   end 
   new_hash
+=======
+  languages.each do |style, language|
+    language.each do |type|
+      new_hash[type[0]] = {type[1], style}
+    end 
+  end 
+>>>>>>> cef61de4877df3c347a853e743be9549b6b80025
 end
